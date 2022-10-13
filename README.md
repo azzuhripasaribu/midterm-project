@@ -11,7 +11,7 @@ We are Group 4 (Temporary) with the following members:
 
 ## Deployment Link
 
-WIP
+https://midterm-project-pbp.herokuapp.com
 
 ## Description
 
