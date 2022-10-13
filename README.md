@@ -16,18 +16,19 @@ https://midterm-project-pbp.herokuapp.com
 ## Description
 
 In this application we want to bring up the topic that is discussed in the current
-G20 summit that took place in Bali. The first thing that we will cover is a general overview about what digitalization and innovation is also their importance. Also followed by the example of digitalization and what sectors are more important to digitalize. Additionally, we will provide news/information about what are the digitalization and innovation issues that are talked about in G20 and what is the possible outcome that can affect our future. 
+Public situation specifically Sexual Harassment. The first thing that we will cover is a general overview about what Sexual Harrassment. Also followed by tips on how to avoid it and a realistic diagram about Sexual Harassment . Additionally, we will provide the examples to improve our awareness about Sexual Harassment. 
 
-The main point of this application is to educate and inform people as well as facilitate discussions about the current events in the world most specifically that are related to the G20's countries in a way that can be learned easily and widely accepted. This application also creates a community to help boost digitalization and build non-governmental innovation.
+The main point of this application is to educate and inform people as well as facilitate support for those people who are not able to Report cases of sexual harassment and protect victims from certain laws or culture in certain countries that might be disadvantageous to the victim. This application also creates a community to help boost digitalization and build non-governmental innovation.
+
 
 
 ## List of modules
 
 - Authentication (Login, Logout, Make an Account)
-- Article (Next Production Revolution, AI-related, manymore)
-- Forum(Comment)
-- Quiz (True and False in form of cards)
-- Navbar (Home,Forum,Quiz, About Us)
+- Article (How to avoid Sexual Harassment with fun explanation like using pictures etc), Below->The Statistic (Diagram)
+- Report Form(Below:Button to Send Email)
+- Flip Card(Examples of Sexual Harassment)
+- Navbar (Home, Article , Flip Card, About Us)
 - About us (Contact Us,etc)
 
 
@@ -48,6 +49,7 @@ After doing these steps, the application will be deployed to the heroku app spec
 ## User Roles
 - Azzuhri Nauli Pasaribu = Authentication
 - Dhiwa Arya Kusumah = Article
-- Muhammad Fiqo Anugrah = Quiz
-- Julian Justin = Forum
+- Muhammad Fiqo Anugrah = Flip card
+- Julian Justin = Report Form
 - Linnea Alija Khan= Navbar, About us
+
