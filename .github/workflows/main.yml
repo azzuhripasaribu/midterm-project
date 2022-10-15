@@ -12,11 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      strategy:
-        max-parallel: 4
-        matrix:
-          python-version: [ 3.8 ]
+    strategy:
+      matrix:
+        python-version: [ 3.8 ]
 
     steps:
     - name: Checkout code
