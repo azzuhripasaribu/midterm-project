@@ -42,15 +42,16 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'login.html')
 
-    def test_register_POST(self):
+    def test_login_POST(self):
         response = self.client.post(reverse('login'), {
             'username':'JohnDoe',
             'password':'Example1.'
         })
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
 
     def test_logout(self):
+        self.client.login(username='JohnDoe', password='Example1.')
         response = self.client.get(reverse('login'))
         self.assertEqual(response.status_code, 302)
         
