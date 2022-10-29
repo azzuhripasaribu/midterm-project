@@ -8,7 +8,8 @@ urlpatterns = [
     path('',index),
     path('about',about),
     path('page1', page1),
-    path('page2', page2)
+    path('page2', page2),
+    path('know/', article)
 ]
 
 
