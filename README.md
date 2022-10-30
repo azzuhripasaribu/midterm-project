@@ -1,4 +1,6 @@
-![Deploy workflow](https://github.com/azzuhripasaribu/midterm-project/actions/workflows/dpl.yml/badge.svg)
+![CI workflow](https://github.com/azzuhripasaribu/midterm-project/actions/workflows/main.yml/badge.svg)
+![CD workflow](https://github.com/azzuhripasaribu/midterm-project/actions/workflows/dpl.yml/badge.svg)
+
 # Midterm_project
 
 ## About Us
