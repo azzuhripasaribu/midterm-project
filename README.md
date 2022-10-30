@@ -1,3 +1,4 @@
+![Deploy workflow](https://github.com/azzuhripasaribu/midterm-project/actions/workflows/dpl.yml/badge.svg)
 # Midterm_project
 
 ## About Us
