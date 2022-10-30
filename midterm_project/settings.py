@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'landing_page',
     'authentication',
     
+    
 ]
 
 MIDDLEWARE = [

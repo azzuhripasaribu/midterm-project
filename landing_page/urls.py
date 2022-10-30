@@ -7,7 +7,7 @@ app_name = 'landing_page'
 urlpatterns = [
     path('',index),
     path('about',about),
-    path('page1', page1),
+    path('reportform', reportform),
     path('page2', page2),
     path('know/', article)
 ]
