@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<!--CSS Design-->
+<style>
+	/* 1. Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+main > nav {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+}
+
+.section-nav a {
+  text-decoration: none;
+  display: block;
+  padding: .125rem 0;
+  color: #ccc;
+  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+  color: #666;
+}
+
+/** Poor man's reset **/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #fff;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin-left: 1rem;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+p {
+  line-height: 32px;   /* within paragraph */
+  margin-bottom: 30px; /* between paragraphs */
+}
+
+/** page layout **/
+main {
+  display: grid;
+  grid-template-columns: 1fr 15em;
+  max-width: 100em;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/** enlarge the sections for this demo, so that we have a long scrollable page **/
+section {
+  padding-bottom: 5rem;
+}
+</style>
+
+<!--HTML-->
+<main>
+	<div>
+		<h1>Know more</h1>
+
+
+		<section id="introduction">
+			<h2>Introduction</h2>
+			<p>
+			Many of you may already know what sexual harassment is, but did you know that this is a sexual harassment too</p>
+			<p style="font-weight:700">“You’re actually doing pretty good for a women/men”</p>
+			<p>According to <a href="http://etactics.com">(http://etactics.com)</a> around 72% victim did not think that they were sexually harassed.
+				So, there’s clearly still not enough of awareness surrounding what is sexual harassment? 
+				What is the effect? And how to to protect ourselves from it.</p>
+		</section>
+
+
+		<section id="request-response">
+			<h2>What is sexual harassment?</h2>
+			<p>Sexual harassment is an unwanted act of sexual behavior that is done in explicit or implicit way that may or may not make the person offended, harmed or intimidated. 
+				Sexual harassment does not always mean it is targeted to one person, it could be conducted to a large group of people and it can affect both men and women. </p>
+		</section>
+
+
+		<section id="type">
+			<h2>What is sexual harassment looks like?</h2>
+			<p>In a whole there is a lot of form of sexual harassment however, in general there is three main types of sexual harassment namely verbal, non-verbal and physical harassment. 
+				To be more specific let’s dive in to each of the examples</p>
+
+			<section id="type-verbal">
+				<h3>1. Verbal sexual harassment</h3>
+				<p>In definition, verbal sexual harassment is an act of sexual behavior that involves verbal activities in an unwelcomed manner (according to damorelaw.com). 
+					To be more clear, if there’s someone saying sexual things that made you feel uncomfortable, then you may be the victim of verbal sexual harassment because of how easy it is to get verbally abused, 
+					this made verbal sexual harassment the most common type of harassment, according to whattobecome.com which 77% act of sexual harassment is verbal abuse. Example of verbal sexual harassments are:</p>
+				<p>
+					- Revealing the desire for sexual activity.<br>
+					- Usage of sexually inappropriate language.<br>
+					- Speaking in a sexual tone.<br>
+					- Criticizing someone’s appearance.<br>
+					- Making a sexual jokes.<br>
+				</p>
+				<p>Keep in mind that not every sexually-themed comment are sexual harassment it usually depends on the context and situation and each person perception are differs. 
+					However, we can draw a line of what considered too far and it is important to not let that slide</p>
+			</section>
+
+			<section id="type-nonverbal">
+				<h3>2. Non-Verbal Harassment</h3>
+				<p>Is an act of unwelcomed sexual activity that is not verbal but also not considered to be physical or usually considered as visual sexual harassment. 
+					This type of harassment is very common in this modern era, this is because of social media whereas the victim received an explicit message, 
+					picture or other similar sexual behavior. However, it is also still conducted in traditional most notably are stalking and staring. Some of the examples are:</p>
+				<p>- Sending inappropriate picture.<br>
+					- Texting in a sexual manner.<br>
+					- Stalking or staring.<br>
+					- Taking picture.<br>
+					- Blowing kiss or winking</p>
+				<p>Because of it’s passive or passive aggressive nature of this behavior it can be relatively hard to identify whether non-verbal abuse have taken place, 
+					and the perpetrators can even positioned themselves to be in discreet places so it may go unnoticed.</p>
+			</section>
+
+			<section id="type-physical">
+				<h3>3. Physical Harassment</h3>
+				<p>Unwelcomed sexual physical behavior can be considered as sexual assault or sexual harassment. While other type of sexual harassment is relatively hard to identify it, 
+					physical sexual harassment is may be the easiest to detect, this is because of the act of physical touch or similar activity is not as common as verbal or visual and it’s usually easy to draw the line. 
+					Some of the examples namely:</p>
+				<p>- Any unwelcomed touching<br>
+					- Hugging, kissing or massaging<br>
+					- Grabbing, rubbing or pinching</p>
+				<p>You cannot let unwelcomed sexual harassment happened. You have the right to reject, push or other similar defensive activity if it is deemed necessary. 
+					It is important to know that you do not need to be afraid especially in workplace.</p>
+			</section>
+		</section>
+
+
+		<section id="effect">
+			<h2>What's the effect?</h2>
+			<h3>For Victims</h3>
+			<p>Significant psychological effects, including as anxiety, sadness, headaches, sleep issues, weight loss or gain, nausea, diminished self-esteem, and sexual dysfunction, 
+				can be experienced by sexual harassment victims. They also suffer expenses associated to their jobs, such as lost wages, low morale, unsatisfactory work, and permanent harm to workplace relationships.<br>
+				<a href="http://www.equalrights.org/professional/sexhar/work/workplac.asp">(http://www.equalrights.org/professional/sexhar/work/workplac.asp)</a>
+				<a href="http://www.stopvaw.org/effects_of_sexual_harassment.html">(http://www.stopvaw.org/effects_of_sexual_harassment.html)</a></p>
+			<p>Additionally, in the context of higher education, students who have been the targets of sexual harassment could feel forced to abandon a class, alter their major or minor, and endure physical and mental anguish. 
+				Overall, sexual harassment creates an environment that is stressful and counterproductive for learning and working.</p>
+			<h3>For Harasser</h3>
+			<p>Sexual harassment may result in written or verbal reprimands, referrals for training or therapy, suspension, reassignment, demotion, or termination of employment. 
+				Another relevant authority may be referred to for review of potential violations of local, state, and federal laws.</p>
+			<p>Any student who is found to have broken any rule(s) established by Ramapo College may be subject to the proper disciplinary measures, which may include, but are not limited to: 
+				referral for an educational program, referral for counseling, written or verbal reprimand, probation, suspension, or expulsion.</p>
+			<p>Visit the Office of Student Conduct website and refer to the "Sexual Misconduct Policy Governing Students" included in the Student Handbook for more details on the process for filing complaints of student harassment.</p>
+		</section>
+
+		…
+		<section id="filters">
+			<h2>Filters</h2>
+			<p>…</p>
+		</section>
+	</div>
+	<nav class="section-nav">
+		<ol>
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#request-response">What's sexual harassment?</a></li>
+			<li><a href="#type">What's sexual harassment looks like?</a>
+        <ul>
+          <li class=""><a href="#type-verbal">Verbal Harassment</a></li>
+          <li class=""><a href="#type-nonverbal">Non-Verbal Harassment</a></li>
+          <li class=""><a href="#type-physical">Physical Harassment</a></li>
+				</ul>
+			<li><a href="#effect">What's the effect?</a></li>
+			<li class=""><a href="#filters">Filters</a></li>
+		</ol>
+	</nav>
+</main>
+
+</html>
+
+<!--Javascript-->
+<script>
+	window.addEventListener('DOMContentLoaded', () => {
+
+const observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+		const id = entry.target.getAttribute('id');
+		if (entry.intersectionRatio > 0) {
+			document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+		} else {
+			document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+		}
+	});
+});
+
+// Track all sections that have an `id` applied
+document.querySelectorAll('section[id]').forEach((section) => {
+	observer.observe(section);
+});
+
+});
+</script>
+
