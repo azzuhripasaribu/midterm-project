@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('landing_page.urls')),
     path('auth/', include('authentication.urls')),
    # path('', include('aboutus.urls'))
+    path('centers/', include('centers.urls')),
 ]
