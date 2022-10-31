@@ -1,3 +1,6 @@
+![CI workflow](https://github.com/azzuhripasaribu/midterm-project/actions/workflows/main.yml/badge.svg)
+![CD workflow](https://github.com/azzuhripasaribu/midterm-project/actions/workflows/dpl.yml/badge.svg)
+
 # Midterm_project
 
 ## About Us
@@ -28,6 +31,7 @@ The main point of this application is to educate and inform people as well as fa
 - Article (How to avoid Sexual Harassment with fun explanation like using pictures etc), Below->The Statistic (Diagram)
 - Report Form(Below:Button to Send Email)
 - Flip Card(Examples of Sexual Harassment)
+- Find Center(get contaact information of support center)
 - Navbar (Home, Article , Flip Card, About Us)
 - About us (Contact Us,etc)
 
@@ -47,9 +51,9 @@ The building, running and deployment of this app is automated by using A CI/CD s
 After doing these steps, the application will be deployed to the heroku app specified in github Secrets.
 
 ## User Roles
-- Azzuhri Nauli Pasaribu = Authentication
+- Azzuhri Nauli Pasaribu = Authentication, Find Center
 - Dhiwa Arya Kusumah = Article
-- Muhammad Fiqo Anugrah = Flip card
+- Muhammad Fiqo Anugrah = Flip card, landing page
 - Julian Justin = Report Form
 - Linnea Alija Khan= Navbar, About us
 
