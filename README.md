@@ -53,7 +53,7 @@ After doing these steps, the application will be deployed to the heroku app spec
 ## User Roles
 - Azzuhri Nauli Pasaribu = Authentication, Find Center
 - Dhiwa Arya Kusumah = Article
-- Muhammad Fiqo Anugrah = Flip card, landing page, contact
+- Muhammad Fiqo Anugrah = Flip card, Landing Page, Contact Form
 - Julian Justin = Report Form
 - Linnea Alija Khan= Navbar, About us
 
