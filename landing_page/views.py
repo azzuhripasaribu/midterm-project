@@ -26,6 +26,8 @@ def list_feedback(request):
     response = {'feedback': feedback}
     return render(request, "form_feedback.html", response)
 
+def reportform(request):
+    return render(request, 'reportform.html', {})
 
 def json_funct(request):
     feedback = Feedback.objects.all()
@@ -42,4 +44,24 @@ def fetch_post_feedback(request):
     form.message = data["message"]
     form.save()
     return JsonResponse({"status" : "berhasil"})
+
+def reportform(request):
+    return render(request, 'reportform.html', {})
+
+def page2(request):
+    return render(request, 'page2.html', {})
+
+@csrf_exempt
+def fetch_post_feedback(request):
+    print(request.method)
+    print(request.body)
+    data = json.loads(request.body)
+    form = Feedback()
+    form.name = data["username"]
+    form.message = data["message"]
+    form.save()
+    return JsonResponse({"status" : "berhasil"})
+
+def education(request):
+    return render(request, 'education.html')
 
