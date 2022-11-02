@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Report Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Report Form</title>
+    <link rel="stylesheet" href=".style.css">
+    
+    
 <style>
 * {
   box-sizing: content-box;
+ 
       
 }
     
@@ -47,7 +52,7 @@ label {
             float: left;
     
     }
-.first_label {
+    .first_label {
             position: relative;
             float: left;
             width: 25%;
@@ -55,15 +60,27 @@ label {
             
     }
     
-.input_label {
-            
-            float: middle;
-            width: 75%;
-            margin-top: 6px;
-            margin-bottom: 5px;
-            font-family: "Roboto", sans-serif;
+    .input_label {
+        float: middle;
+        width: auto;
+        margin-top: 6px;
+        margin-bottom: 5px;
+        font-family: "Roboto", sans-serif;
     }
-    
+    .input_label #Name {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        
+
+    }
+    .input_label #message {
+        
+        width:1490px
+    }
+    .input_label #type_harrasment {
+        
+        width:1490px
+    }
     /* Clear floats after the columns */
 .row:after {
       content: "";
@@ -76,7 +93,7 @@ label {
         font-size: 15px;
         font-weight: bold;
         background: #c9184a;
-        width: 535px;
+        width: auto;
         padding: 15px;
         text-align: center;
         text-decoration: none;
@@ -166,7 +183,7 @@ a {
       overflow: hidden;
     }
     .collapsed li:after {
-        background: rgb(227,227,227);
+        background: rgb(6, 5, 5);
         background: linear-gradient(90deg, rgba(227,227,227,0.4) 0%, rgba(227,227,227,1) 35%);
         padding-left: 1em;
       }
@@ -184,58 +201,8 @@ a {
         padding-left: 0em;
         background: transparent;
       }
-.container .box2 {
-        position: relative;
-        background-color: #ff8fa3;
-        width:calc(400px - 30px);
-        height: calc(300px - 30px);
-        float:right;
-        box-sizing: border-box;
-        overflow: hidden;
-        border-radius: 10px;
-        margin: 15px ;
-    }
-.container .box2 .icon{
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height:100%;
-        background: #f00;
-        transition: 0,5;
-        z-index: 1;
-    }
-.container .box:hover .icon {
-        top:20px;
-        right:calc(50% - 40px);
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-.container .box .icon .fa {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate( -50%, -50%);
-        font-size: 80px;
-        transition: 0,5s;
-        color: #fff;
-    }
-.container .box:hover .icon .fa {
-        font-size: 40px;
-    }
-.container .box .content{
-        position: absolute;
-        top: 100px;
-        height: calc(100% - 100px);
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-        transition: 0.5s;
-    
-    }
-.container .box .content{
-    }
+
+
     /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
     /*@media screen and (max-width: 600px) {
       .first_label, .input_label, .container, .box1 {
@@ -246,13 +213,14 @@ a {
 </style>
 </head>
 <body>
+        
     <div class="container">
     <ul class="collapsed">
-        <li><a href="#">Home</a></li><!--
-        --><li><a href="#">First link</a></li><!--
-        --><li><a href="#">Second link</a></li><!--
-        --><li><a href="#">Another lengthier link</a></li><!--
-        --><li><a href="#">Final link in the hierarchy</a></li><!--
+        <li><a href="{% url 'landing_page:base' %}">Home</a></li><!--
+        --><li><a href="{% url 'landing_page:aboutus' %}">About Us</a></li><!--
+        --><li><a href="{% url 'landing_page:article' %}">Article</a></li><!--
+        --><li><a href="{% url 'landing_page:page2' %}">page2</a></li><!--
+        --><li><a href="{% url 'landing_page:manu' %}">page2</a></li><!--
         --><li>Current page</li>
     </ul>
         <div class="box1">
@@ -265,58 +233,42 @@ a {
         </p>
         </div>
     
-            <form>
-            <div class="row">
-                <div class="first_label">
-                <label for="fname">Full Name</label>
+        <form action="https://formspree.io/f/xdojppkd" method="POST" >
+                <div class="row">
+                    <div class="first_label">
+                        <label for="Name">Full Name</label>
+                    </div>
+                    <div class="input_label">
+                        <input type="text" id="Name" name="Name" placeholder="Your name..">
+                    </div>
+                 
+                    <div class="first_label">
+                        <label for="Type Of Harassment">Type Of Harassment</label>
+                    
+                    <div class="input_label">
+                        <select id="type_harrasment" name="Type of Harassment">
+                            <option value="cyber">Cyberbullying</option>
+                            <option value="sexual">Sexual Harassment</option>
+                            <option value="physical">Physical Harassment</option>
+                            <option value="psychological">Psychological Harassment</option>
+                            <option value="discriminatory">Discriminatory Harassment</option>
+                            <option value="others">Other</option>
+                        </select>
+                    </div>
+                    <div class="first_label">
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="input_label">
+                        <textarea id="message" name="message" placeholder="Please Write the Details and your Email with your Phone Number" style="height:200px"></textarea>
                 </div>
-                <div class="input_label">
-                <input type="text" id="fname" name="fullname" placeholder="Your name..">
-                </div>
-            </div>
-        
-            <div class="row">
-                <div class="first_label">
-                <label for="country">Type of Harassment</label>
-                </div>
-                <div class="input_label">
-                    <select id="type_harrasment" name="Type of Harassment">
-                        <option value="cyber">Cyberbullying</option>
-                        <option value="sexual">Sexual Harassment</option>
-                        <option value="physical">Physical Harassment</option>
-                        <option value="psychological">Psychological Harassment</option>
-                        <option value="discriminatory">Discriminatory Harassment</option>
-                        <option value="others">Other</option>
-                    </select>
-                </div>
-            </div>
-        
-            <div class="first_label">
-                <label for="message">Message</label>
-            </div>
-            <div class="input_label">
-                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
-            </div>
-        
-            <div>
-            <input class="btn_send_help" type="submit" value="Send Your Report Now!">
-            </div>
-            </form>
-            
-    </div>
-        <div class="box2">
-            <div class="icon"><i class="fa fa-search" aria-hidden="true">
-            </i></div>
-            <div class="AboutUs"
-                <h3>About Us</h3>
-                <p>Need Help with anything or Contact Us
-                Please Click Here! 
-                </p>
-            </div>
-        </div>
-    
+                    
+                            
+                        <button class="btn_send_help" type="submit">Send Your Report Now!</button>
+                
+        </form>            
+    </div>   
 </div>
-    
+         
     
 </body>
 </html>

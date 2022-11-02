@@ -16,4 +16,6 @@ def page2(request):
 
 def article(request):
     return render(request, 'article.html')
+def manu(request):
+    return render(request, 'manu.html', {})
 
