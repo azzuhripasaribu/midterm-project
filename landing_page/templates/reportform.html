@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Report Form</title>
+    <link rel="stylesheet" href=".style.css">
+    
+    
+<style>
+* {
+  box-sizing: content-box;
+ 
+      
+}
+    
+       
+    
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  color: rgb(21, 18, 14);
+  border: 1px solid #800f2f;
+  border-radius: 4px;
+  resize: vertical;
+}
+    
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  margin-bottom: 1px;
+}
+    
+    
+    
+.container {
+      position: relative;
+      border-radius: 5px;
+      background-color: #ff758f;
+      padding: 20px;
+      font-family: "Roboto", sans-serif;
+      width:100%;
+      height:100%;
+      margin-top: 6px;
+      margin-bottom: 5px;
+      
+    }
+.box1 {
+        position: absolute;
+            margin-top: 0;
+            height:100%;
+            float: left;
+    
+    }
+    .first_label {
+            position: relative;
+            float: left;
+            width: 25%;
+            margin-top: 75px;
+            
+    }
+    
+    .input_label {
+        float: middle;
+        width: auto;
+        margin-top: 6px;
+        margin-bottom: 5px;
+        font-family: "Roboto", sans-serif;
+    }
+    .input_label #Name {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        
+
+    }
+    .input_label #message {
+        
+        width:1490px
+    }
+    .input_label #type_harrasment {
+        
+        width:1490px
+    }
+    /* Clear floats after the columns */
+.row:after {
+      content: "";
+      display: table;
+      margin-top:5px;
+      clear: both;
+    }
+.btn_send_help{
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        background: #c9184a;
+        width: auto;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        
+        color:rgb(12, 11, 11);
+        border-radius: 15px;
+        border-color:#ff758f;
+        cursor: pointer;
+        box-shadow: 0 0 15px #ff8fa3;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: box-shadow, transform;
+        transition-property:box-shadow, transform ;
+    
+    }
+.btn_send_help:focus, .btn_send_help:active, .btn_send_help:hover{
+        box-shadow:0 0 20px rgba(172, 63, 63, 0.5);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+.paragraph span {
+            display: block;
+            text-align: right;
+            margin-left: 250px;
+            font-family: Garamond, serif;
+        
+            opacity:0;
+            animation: reveal 0.5s forwards var(--delay);
+    
+        }
+        @keyframes reveal {
+            from {
+                translate: 0 20px;
+            }
+            to {
+                translate: none;
+                opacity: 1;
+            }
+        }
+    
+.collapsed{
+        background-color: #ff8fa3;
+        background-image: url
+    }
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 2em;
+      color: #333;
+    }
+    
+li {
+      display: inline-block;
+      position: relative;
+      padding-right: 2em;
+      margin: 0;
+    }
+    li:after {
+        content: '/';
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        width: 2em;
+        text-align: center;
+      }
+li:last-child {
+      font-weight: bold;
+    }
+    li:last-child:after {
+        content: '';
+      }
+    
+a {
+      text-decoration: none;
+      display: inline-block;
+      color: #333;
+      white-space: nowrap;
+    }
+      a:hover {
+        text-decoration: underline;
+      }
+    
+    
+    
+    
+.collapsed li {
+      overflow: hidden;
+    }
+    .collapsed li:after {
+        background: rgb(6, 5, 5);
+        background: linear-gradient(90deg, rgba(227,227,227,0.4) 0%, rgba(227,227,227,1) 35%);
+        padding-left: 1em;
+      }
+    
+.collapsed a {
+      max-width: 2em;
+      transition: max-width 300ms ease-in-out;
+    }
+    .collapsed a:hover,
+    .collapsed a:focus,
+    .collapsed li:hover a {
+        max-width: 1000px;
+      }
+    .collapsed li:hover:after {
+        padding-left: 0em;
+        background: transparent;
+      }
+
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    /*@media screen and (max-width: 600px) {
+      .first_label, .input_label, .container, .box1 {
+        width: 100%;
+        margin-top: 0;
+      }
+    }*/
+</style>
+</head>
+<body>
+        
+    <div class="container">
+    <ul class="collapsed">
+        <li><a href="{% url 'landing_page:base' %}">Home</a></li><!--
+        --><li><a href="{% url 'landing_page:aboutus' %}">About Us</a></li><!--
+        --><li><a href="{% url 'landing_page:article' %}">Article</a></li><!--
+        --><li><a href="{% url 'landing_page:page2' %}">page2</a></li><!--
+        --><li><a href="{% url 'landing_page:manu' %}">page2</a></li><!--
+        --><li>Current page</li>
+    </ul>
+        <div class="box1">
+        <h2>Report Crime Cases</h2>
+        <p class="paragraph">
+                <span style="--delay: 0s;">Please Treasure Your Body</span>
+                <span style="--delay: 2s;">Protect Your Body</span>
+                <span style="--delay: 4s;">This will benefit your life and others</span>
+    
+        </p>
+        </div>
+    
+        <form action="https://formspree.io/f/xdojppkd" method="POST" >
+                <div class="row">
+                    <div class="first_label">
+                        <label for="Name">Full Name</label>
+                    </div>
+                    <div class="input_label">
+                        <input type="text" id="Name" name="Name" placeholder="Your name..">
+                    </div>
+                 
+                    <div class="first_label">
+                        <label for="Type Of Harassment">Type Of Harassment</label>
+                    
+                    <div class="input_label">
+                        <select id="type_harrasment" name="Type of Harassment">
+                            <option value="cyber">Cyberbullying</option>
+                            <option value="sexual">Sexual Harassment</option>
+                            <option value="physical">Physical Harassment</option>
+                            <option value="psychological">Psychological Harassment</option>
+                            <option value="discriminatory">Discriminatory Harassment</option>
+                            <option value="others">Other</option>
+                        </select>
+                    </div>
+                    <div class="first_label">
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="input_label">
+                        <textarea id="message" name="message" placeholder="Please Write the Details and your Email with your Phone Number" style="height:200px"></textarea>
+                </div>
+                    
+                            
+                        <button class="btn_send_help" type="submit">Send Your Report Now!</button>
+                
+        </form>            
+    </div>   
+</div>
+         
+    
+</body>
+</html>
