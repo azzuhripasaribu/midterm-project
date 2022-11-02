@@ -137,44 +137,6 @@
         </div>
     </div>
 
-<!-- feedback -->
-
-<div id="feedback" class="feedback section">
-    <div class="container section-padding">
-        <div class="row">
-            <div class="col-12">
-                <div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h1>Feedback</h1>
-                    <p>This form is dedicated to help us improve our services better, therefore, any kinds of input would be greatly appreciated</p>
-                    <div class="line"></div>
-                </div>
-            </div>
-        </div>
-    <div class="container">
-      <div class="row">
-        </div>
-        <div  id="feedback-content" class="container px-4 ">
-          <div class="row-cols-1 row-cols-lg-3">
-            <div id="card-content" class="feature col">
-              <form method="POST" id="form">
-                  <table>
-                      {% csrf_token %}
-                      {{ form|crispy }}
-                  </table>
-                  <button   type="submit" class="btn btn-brand">Kirim</button>
-                  <a href="/feedback">
-                  <button   type="button" class="btn btn-brand">Lihat feedback</button>
-                  </a>
-                </form>
-                <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-                <script></script>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   <!-- footer -->
 
