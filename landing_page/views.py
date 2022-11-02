@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 
 # Create your views here.
 def index(request):
@@ -16,6 +16,9 @@ def page2(request):
 
 def article(request):
     return render(request, 'article.html')
+
+def education(request):
+    return render(request, 'education.html')
+
 def manu(request):
     return render(request, 'manu.html', {})
-
