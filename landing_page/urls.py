@@ -4,9 +4,6 @@ from landing_page.views import *
 
 app_name = 'landing_page'
 
-
-app_name = 'main'
-
 urlpatterns = [
     path('',index, name = 'home'),
     path('reportform/', reportform, name='reportform'),
