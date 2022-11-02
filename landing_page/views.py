@@ -1,12 +1,49 @@
-from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.shortcuts import render, redirect
+from requests import request
+from landing_page.models import Feedback
+from landing_page.forms import FormFeedback
+from django.http import JsonResponse
+import json
+from django.core import serializers
+from django.http.response import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
-def index(request):
-    return render(request, 'landing_page.html', {})
 
-def about(request):
-   return render(request, 'aboutus.html', {})
+def index(request):
+    form = FormFeedback()
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        form = FormFeedback(request.POST)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({
+                'msg': 'Success'
+            })
+    return render(request,"landing_page.html", {"form": form})
+
+def list_feedback(request):
+    feedback = Feedback.objects.all().values()
+    response = {'feedback': feedback}
+    return render(request, "form_feedback.html", response)
+
+def reportform(request):
+    return render(request, 'reportform.html', {})
+
+def json_funct(request):
+    feedback = Feedback.objects.all()
+    jsonFeedback = serializers.serialize('json', feedback)
+    return HttpResponse(jsonFeedback, content_type="application/json")
+
+@csrf_exempt
+def fetch_post_feedback(request):
+    print(request.method)
+    print(request.body)
+    data = json.loads(request.body)
+    form = Feedback()
+    form.name = data["username"]
+    form.message = data["message"]
+    form.save()
+    return JsonResponse({"status" : "berhasil"})
 
 def reportform(request):
     return render(request, 'reportform.html', {})
@@ -14,11 +51,17 @@ def reportform(request):
 def page2(request):
     return render(request, 'page2.html', {})
 
-def article(request):
-    return render(request, 'article.html')
+@csrf_exempt
+def fetch_post_feedback(request):
+    print(request.method)
+    print(request.body)
+    data = json.loads(request.body)
+    form = Feedback()
+    form.name = data["username"]
+    form.message = data["message"]
+    form.save()
+    return JsonResponse({"status" : "berhasil"})
 
 def education(request):
     return render(request, 'education.html')
 
-def manu(request):
-    return render(request, 'manu.html', {})
