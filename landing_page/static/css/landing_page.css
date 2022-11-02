@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /* Variables */
 :root {
-    --c-brand: #bf4aa8;
+    --c-brand: #E40146;
     --c-brand-rgb: 248, 54, 145;
     --c-dark: #303050;
     --c-body: #636383;
@@ -72,16 +72,6 @@ img {
 
 .section-connector {
     position: relative;
-}
-
-.section-connector::after {
-    content: '';
-    width: 2px;
-    height: 100px;
-    background-color: var(--c-brand);
-    position: absolute;
-    top: -50px;
-    left: 50%;
 }
 
 /* Navbar */
@@ -169,7 +159,7 @@ img {
 
 /* Home */
 #home {
-    background-image: url(../templates/images/hero.jpg);
+    background-image: url(../images/hero.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -222,7 +212,7 @@ img {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--c-brand);
+    background-color: var(c);
     width: 100%;
     height: 100%;
     display: flex;

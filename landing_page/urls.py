@@ -4,12 +4,14 @@ from landing_page.views import *
 
 app_name = 'landing_page'
 
+
+app_name = 'main'
+
 urlpatterns = [
-    path('',index),
-    path('about',about),
-    path('page1', page1),
-    path('page2', page2),
-    path('know/', article)
+    path('',index, name = 'home'),
+    path('feedback', list_feedback, name='feedback'),
+    path('json_function', json_funct, name='json_function'),
+    path('fetch_feedback', fetch_post_feedback, name='fetch_feedback'),
 ]
 
 

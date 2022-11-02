@@ -1,0 +1,514 @@
+
+
+
+
+
+
+
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+em,
+font,
+img,
+i,
+center,
+ol,
+ul,
+li,
+header,
+nav,
+section,
+article,
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000;
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+html,
+body {
+  background: #e8f7fc;
+  font-family: "Poppins", sans-serif;
+}
+
+/* untuk login dan mulai sekarang */
+.border-first-button a {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  color: #17c2ec !important;
+  border: 1px solid #17c2ec !important;
+  border-radius: 23px;
+  font-weight: 500 !important;
+  letter-spacing: 0.3px !important;
+  transition: all 0.5s;
+}
+
+.border-first-button a:hover {
+  background-color: #17c2ec;
+  color: #fff !important;
+}
+
+/* 
+---------------------------------------------
+header
+--------------------------------------------- 
+*/
+
+.pre-header {
+  background-color: #efefef;
+  height: 60px;
+  /* untuk text preheader */
+  padding: 15px 0px;
+}
+/* Agar tulisan menjadi 1 baris */
+.pre-header ul li {
+  display: inline-block;
+}
+
+.pre-header ul.info li {
+  margin-right: 45px;
+}
+
+.pre-header ul.info li a {
+  color: #afafaf;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+/* Mengubah warna ketika kursor diarahkan ke tulisan yang ada di pre-header */
+.pre-header ul.info li a:hover {
+  color: #fa65b1;
+}
+
+.pre-header ul.info li a i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.pre-header ul.social-media {
+  text-align: right;
+}
+
+.pre-header ul.social-media li {
+  margin-left: 5px;
+}
+
+.pre-header ul.social-media li a {
+  background-color: #afafaf;
+  color: #fff;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+/* Untuk social media pre-header */
+.pre-header ul.social-media li a:hover {
+  background-color: #fa65b1;
+}
+
+.header-area {
+  background-color: #060c23;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.03);
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  height: 100px;
+}
+
+.header-area .main-nav {
+  min-height: 80px;
+  background: transparent;
+}
+
+.header-area .main-nav .logo {
+  float: left;
+}
+
+.header-area .main-nav .logo {
+  line-height: 100px;
+  float: left;
+}
+/* untuk background header logonya */
+.background-header .main-nav .logo {
+  line-height: 80px;
+}
+
+.background-header .main-nav .nav {
+  margin-top: 20px !important;
+}
+
+.header-area .main-nav .nav {
+  float: right;
+  margin-top: 30px;
+  margin-right: 0px;
+  background-color: transparent;
+  position: relative;
+}
+
+.header-area .main-nav .nav li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* jarak antara button dengan navbar lainnya */
+.header-area .main-nav .nav li:last-child {
+  padding-right: 0px;
+  padding-left: 40px;
+}
+
+.header-area .main-nav .nav li:last-child a,
+.background-header .main-nav .nav li:last-child a {
+  padding: 0px 20px !important;
+}
+
+.header-area .main-nav .nav li:last-child a:hover,
+.background-header .main-nav .nav li:last-child a:hover {
+  color: #fff !important;
+}
+
+.header-area .main-nav .nav li a {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border: transparent;
+  letter-spacing: 1px;
+}
+/* ketika ada kursor warna tulisan akan berubah */
+.header-area .main-nav .nav li:hover a,
+.header-area .main-nav .nav li a.active {
+  color: #17c2ec !important;
+}
+
+.header-area.header-sticky {
+  min-height: 80px;
+}
+
+/* 
+---------------------------------------------
+Banner Style
+--------------------------------------------- 
+*/
+
+.main-banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 226px 0px 120px 0px;
+  position: relative;
+  overflow: hidden;
+  background-color: #060c23;
+}
+
+.main-banner .left-content {
+  margin-right: 15px;
+}
+/* untuk tulisan covid asistant */
+.main-banner .left-content h6 {
+  text-transform: capitalize;
+  font-size: 20px;
+  /* untuk bold text */
+  font-weight: 700;
+  color: #17c2ec;
+  margin-bottom: 15px;
+}
+/* text reminder appnya */
+.main-banner .left-content h2 {
+  position: relative;
+  font-weight: 700;
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.main-banner .left-content p {
+  margin-bottom: 30px;
+  margin-right: 45px;
+  color: #fff;
+}
+/* ilustrasi awal */
+.main-banner .right-image {
+  text-align: right;
+  position: relative;
+  z-index: 20;
+}
+
+.main-banner .right-image img {
+  max-width: 593px;
+}
+
+/* 
+---------------------------------------------
+About Style
+--------------------------------------------- 
+*/
+
+#about {
+  padding-top: 130px;
+}
+
+.about-right-content h6 {
+  font-weight: 700;
+  width: 139px;
+  height: 42px;
+  color: #17c2ec;
+  font-size: 20px;
+
+  margin-bottom: 280px;
+}
+.about-right-content h4 {
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 280px;
+  margin-top: -290px;
+  font-size: 48px;
+}
+.about-left-image img {
+  margin-right: 45px;
+}
+
+.about-right-content p {
+  margin-top: -250px;
+  margin-bottom: 280px;
+  color: #000;
+}
+
+/* 
+---------------------------------------------
+Services Style
+--------------------------------------------- 
+*/
+
+.services {
+  padding-top: 130px;
+}
+/* Header service atau fitur */
+.services .section-heading {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.section-heading h6 {
+  font-weight: 700;
+  color: #17c2ec;
+  font-size: 20px;
+}
+.section-heading h4 {
+  font-weight: 700;
+  color: #000;
+  font-size: 48px;
+}
+#card-fitur {
+  border-radius: 20px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-left: auto;
+  width: 360px;
+}
+
+/* 
+---------------------------------------------
+Feedback Style
+--------------------------------------------- 
+*/
+
+#card-content {
+  width: 600px;
+  margin-right: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+#button-feedback {
+  width: 220px;
+  /* margin-left: 120px; */
+  margin-right: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+/* 
+---------------------------------------------
+Footer Style
+--------------------------------------------- 
+*/
+
+.footer {
+  background-color: #060c23;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 210px;
+  margin-top: 200px;
+  word-break: break-all;
+}
+
+.footer-col {
+  width: 32%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+}
+.footer-col ul li:hover a {
+  color: #fff;
+  padding-left: 8px;
+}
+
+/* 
+---------------------------------------------
+responsive
+--------------------------------------------- 
+*/
+
+@media (max-width: 1200px) {
+  .header-area .main-nav .logo h4 {
+    font-size: 24px;
+  }
+  .header-area .main-nav .logo h4 img {
+    max-width: 25px;
+    margin-left: 0px;
+  }
+  .header-area .main-nav .nav li:last-child {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-area .main-nav .logo h4 {
+    font-size: 20px;
+  }
+  .main-banner .left-content {
+    margin-right: 0px;
+  }
+  .main-banner {
+    text-align: center;
+    padding: 226px 0px 30px 0px;
+  }
+
+  .main-banner .right-image {
+    margin: 30px auto 0px auto;
+    text-align: center;
+  }
+
+  .about-left-image img {
+    margin-right: 0px;
+    margin-bottom: 45px;
+  }
+
+  .about-us .left-image {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .logo h4 {
+    font-size: 30px;
+  }
+  .header-area .main-nav .logo h4 img {
+    max-width: 30px;
+    margin-left: 5px;
+  }
+
+  .section-heading,
+  .about-us .section-heading,
+  .about-us .about-item,
+  .about-us p,
+  .about-us {
+    text-align: center;
+  }
+  .about-us .about-item {
+    margin-top: 15px;
+  }
+}
+
