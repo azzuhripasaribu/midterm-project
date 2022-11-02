@@ -1,5 +1,226 @@
-{% extends "base.html" %}
-
+{% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
-<hi>hello world</hi>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConsentBeacon</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+  <link rel="stylesheet" href="../static/css/landing_page.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="#"><img src="../static/images/logo1.png" alt="ConsentBeacon"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#work">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#blog">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#feedback section">Feedback</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav flex-row">
+                  <li class="nav-item">
+                      <a class="social-icon" href="#"><i class="ri-whatsapp-line"></i></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="social-icon" href="#"><i class="ri-twitter-line"></i></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="social-icon" href="#"><i class="ri-youtube-line"></i></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="d-flex align-items-center min-vh-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-2 fw-bold" data-aos="fade-up">HARASSMENT WILL NOT BE<span class="text-brand"> TOLERATED.</span></h1>
+                <h4 data-aos="fade-up" data-aos-delay="100" class="mt-3 mb-5">Speak out<span class="text-brand"> againts harassment</span></h4>
+                <div data-aos="fade-up" data-aos-delay="200"><a href="{% url 'landing_page:reportform' %}" class="btn btn-brand">Report</a></div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- About us -->
+  <section id="work">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="setion-title text-center">
+                    <h1>Defend Yourself</h1>
+                    <p>these are some ways to avoid or prevent sexual violence against you.</p>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project">
+                    <img src="../static/images/p-1.jpg" alt="">
+                    <div class="content">
+                        <p class="h2">try not to walk in lonely places alone. choose a brighter and busier road</p1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project">
+                    <img src="./static/images/p-2.jpg" alt="">
+                    <div class="content">
+                        <p class="h2">attract attention when sexually harassed in public don't hesitate to shout, ask for help or code to get other people's attention</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="project">
+                    <img src="./static/images/p-3.jpg" alt="">
+                    <div class="content">
+                        <p class="h2">Be aware of the surrounding environment whether on nets, in public transportation, or also in public places.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project">
+                    <img src="./static/images/p-4.jpg" alt="">
+                    <div class="content">
+                        <p class="h2">make sure you have set an emergency phone number if someone is suspicious, you can immediately contact your parents, friends, or the police quickly</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project">
+                    <img src="../static/images/p-5.jpg" alt="">
+                    <div class="content">
+                        <p class="h2">always have personal protection available, not firearms or sharp objects, but objects that can be used for self-defense such as umbrellas, chili spray, or electric shocks</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="project">
+                    <img src="./static/images/p-6.jpg" alt="">
+                    <div class="content">
+                        <p class="h2">Don't be afraid to record or take photos of suspicious people. this way can be as evidence if the authorities ask for evidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- feedback -->
+
+<div id="feedback" class="feedback section">
+    <div class="container section-padding">
+        <div class="row">
+            <div class="col-12">
+                <div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h1>Feedback</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci architecto dignissimos saepe iste soluta. Aperiam exercitationem doloribus soluta.</p>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+      <div class="row">
+        </div>
+        <div  id="feedback-content" class="container px-4 ">
+          <div class="row-cols-1 row-cols-lg-3">
+            <div id="card-content" class="feature col">
+              <form method="POST" id="form">
+                  <table>
+                      {% csrf_token %}
+                      {{ form|crispy }}
+                  </table>
+                  <button   type="submit" class="btn btn-brand">Kirim</button>
+                  <a href="/feedback">
+                  <button   type="button" class="btn btn-brand">Lihat feedback</button>
+                  </a>
+                </form>
+                <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+                <script></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- footer -->
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col">
+                        <h4><a href="#" class="text-white">Consent Beacon</a></h4>
+                        <p>Consent Beacon was developed by university students who are deeply concerned about harassment, particularly sexual harassment. We are dedicated to helping victims by offering a platform for victims in need of any type of assistance they necessitate, ranging from reliable report form with professional responder to huge data of help centers. We also want to provide an environment for anyone who wants to learn more about sexual harassment by providing an easy to understand education page and blogs that provides a curated and trusted studies from experts</p>
+                        <ul class="navbar-nav flex-row">
+                            <li class="nav-item">
+                                <a class="social-icon" href="#"><i class="ri-dribbble-line"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="social-icon" href="https://github.com/azzuhripasaribu/midterm-project"><i class="ri-github-line"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="social-icon" href="#"><i class="ri-instagram-line"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="social-icon" href="#"><i class="ri-youtube-line"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 ms-auto">
+                
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>Email: consentbeacon@gmail.com</li>
+                            <li>Phone: 08184782889</li>
+                            <li>Address: Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./static/js/app.js"></script>
+
+</body>
+
 {% endblock %}
+
