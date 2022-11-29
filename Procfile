@@ -1,2 +1,1 @@
-migrate: python manage.py migrate
-web: gunicorn midterm_project.wsgi --log-file -
+web: python manage.py migrate gunicorn midterm_project.wsgi --log-file -
