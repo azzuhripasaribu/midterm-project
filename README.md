@@ -14,7 +14,7 @@ We are L'avant Garde with the following Group members:
 
 ## Deployment Link
 
-midterm-project-pbp.up.railway.app
+https://midterm-project-pbp.up.railway.app
 
 ## Description
 
