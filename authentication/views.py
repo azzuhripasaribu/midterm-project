@@ -8,6 +8,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
+@csrf_exempt
 def register_user(request):
     form = UserCreationForm()
 
@@ -21,6 +22,7 @@ def register_user(request):
     context = {'form':form}
     return render(request,'register.html',context)
 
+@csrf_exempt
 def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
