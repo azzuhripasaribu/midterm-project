@@ -2,7 +2,10 @@ from django.shortcuts import get_object_or_404, render
 from django.views import generic
 
 from .forms import CommentForm
-from .models import Post
+from .models import Post, Comment
+
+from django.http import HttpResponse, JsonResponse
+from django.core import serializers
 
 
 class PostList(generic.ListView):
@@ -45,3 +48,16 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
+def show_json(request):
+    post = Post.objects.all()
+
+    # return JsonResponse({'post':post_json, 'comment':comment_json}, safe=False)
+    return HttpResponse(serializers.serialize("json", post), content_type="application/json")
+    # return JsonResponse({'comment':comment_json}, safe=False)
+
+def show_commenttos(request):
+    comment = Comment.objects.all()
+    return HttpResponse(serializers.serialize("json", comment), content_type="application/json")
+    
+
